@@ -25,6 +25,10 @@ object Application extends Controller {
 
       val urlExtractor = """(?s).*(http://[\w\d\./]+).*""".r
       if (p1.getUser.getScreenName == "amararegame" && !p1.getText.contains("終了")) {
+        if (p1.getText.contains("ジョジョ")) {
+          // hack
+          amazonChannel.push("http://www.amazon.co.jp/gp/product/B00APVDHLI/ref=as_li_tf_il?ie=UTF8&camp=247&creative=1211&creativeASIN=B00APVDHLI&linkCode=as2&tag=amarare-22")
+        }
         val beginTime = new java.util.Date().getTime
         p1.getText match {
           case urlExtractor(url) => {
