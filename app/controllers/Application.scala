@@ -27,7 +27,7 @@ object Application extends Controller {
       if (p1.getUser.getScreenName == "amararegame" && !p1.getText.contains("終了")) {
         if (p1.getText.contains("ジョジョ")) {
           // hack
-          amazonChannel.push("http://www.amazon.co.jp/gp/product/B00APVDHLI/ref=as_li_tf_il?ie=UTF8&camp=247&creative=1211&creativeASIN=B00APVDHLI&linkCode=as2&tag=amarare-22")
+          amazonChannel.push("http://www.amazon.co.jp/%E3%82%B8%E3%83%A7%E3%82%B8%E3%83%A7%E3%81%AE%E5%A5%87%E5%A6%99%E3%81%AA%E5%86%92%E9%99%BA-%E3%82%AA%E3%83%BC%E3%83%AB%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%90%E3%83%88%E3%83%AB-%E6%95%B0%E9%87%8F%E9%99%90%E5%AE%9A%E7%94%9F%E7%94%A3-%E9%BB%84%E9%87%91%E4%BD%93%E9%A8%93-BOX/dp/B00APVDHLI")
         }
         val beginTime = new java.util.Date().getTime
         p1.getText match {
