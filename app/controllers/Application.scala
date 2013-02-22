@@ -36,7 +36,7 @@ object Application extends Controller {
                 body match {
                   case amazonURLExtractor(amazonURL) => {
                     Logger.info(amazonURL)
-                    amazonChannel.push(amazonURL)
+                    if (p1.getText.contains("ジョジョ")) amazonChannel.push(amazonURL)
                   }
                 }
               }
