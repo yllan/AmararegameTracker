@@ -1,0 +1,12 @@
+@(message: String)
+
+@main("AmaRareGame Tracker") {
+<h1>Keep this page open. Once an item found, it will redirect to the amazon page.</h1>
+<script>
+    var source = new EventSource('@routes.Application.amazonStream');
+    source.addEventListener('redirect', function(e) {
+        window.location = e.data
+    }, false);
+
+</script>
+}
